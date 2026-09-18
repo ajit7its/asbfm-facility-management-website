@@ -36,6 +36,7 @@ a { text-decoration: none; }
   height: 48px;
   object-fit: cover;
   border-radius: 50%;
+  margin-top: 1rem;
 }
 
 .navbar-brand strong {
@@ -44,6 +45,7 @@ a { text-decoration: none; }
   font-size: 1.05rem;
   line-height: 1;
   letter-spacing: .04em;
+  margin-top: 1.5rem;
 }
 
 .navbar-brand small {
@@ -460,6 +462,17 @@ a { text-decoration: none; }
 
 .contact-list > i,
 .contact-list a > i {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--brand);
+  border-radius: 50%;
+}
+
+.address > i {
   flex: 0 0 46px;
   width: 46px;
   height: 46px;

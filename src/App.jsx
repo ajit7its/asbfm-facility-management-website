@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { Collapse } from "bootstrap";
 const services = [
   {
     icon: "bi-building-check",
@@ -58,12 +58,13 @@ function useRevealAnimations() {
 function App() {
   useRevealAnimations();
 
-  const closeNavbar = () => {
-    const nav = document.getElementById("mainNav");
-    if (nav?.classList.contains("show")) {
-      window.bootstrap?.Collapse?.getOrCreateInstance(nav)?.hide();
-    }
-  };
+const closeNavbar = () => {
+  const nav = document.getElementById("mainNav");
+
+  if (nav?.classList.contains("show")) {
+    Collapse.getOrCreateInstance(nav).hide();
+  }
+};
 
   return (
     <>
@@ -72,7 +73,7 @@ function App() {
           <a className="navbar-brand d-flex align-items-center gap-2" href="#home" onClick={closeNavbar}>
             <img src="/assets/asbfm-logo.jpg" alt="ASBFM logo" />
             <span>
-              <strong>ASBFM</strong>
+              <strong>ASBFM Pvt. Ltd.</strong>
               <small>Facility Management</small>
             </span>
           </a>
@@ -292,7 +293,7 @@ function App() {
                     <i className="bi bi-envelope"></i>
                     <span><small>EMAIL</small>info@asbfm.in<br />sales@asbfm.in</span>
                   </a>
-                  <div>
+                  <div className="address">
                     <i className="bi bi-geo-alt"></i>
                     <span>
                       <small>HEAD OFFICE</small>
